@@ -1,5 +1,4 @@
 # Halide-perovskite-structures
-# Project Name
 > Surface slab calculations for halide perovskites
 > Live demo [_here_]
 
