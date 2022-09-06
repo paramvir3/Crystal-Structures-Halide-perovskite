@@ -1,5 +1,5 @@
 # Halide-perovskite-structures
-> Surface slab calculations for halide perovskites
+> calculations for halide perovskites
 > Live demo [_here_]
 
 ## Table of Contents
