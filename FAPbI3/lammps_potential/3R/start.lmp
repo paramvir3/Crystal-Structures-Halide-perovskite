@@ -1,0 +1,54 @@
+
+dimension       3
+boundary        p p p
+units           real
+atom_style      full
+variable        seed world 1428
+variable        temperature equal 300.0
+variable        temperature2 equal 300.0
+variable        tempDamp equal 100.0 # approx 0.1 ps
+variable        pressure equal 1.00
+variable        pressureDamp equal 500.0
+variable        freq equal 500
+read_data       data.FAPI
+include         in.FAPI
+thermo          ${freq}
+thermo_style    custom step temp pe ke etotal press lx ly lz xy xz yz
+
+# Minimization
+min_style cg
+#fix 1 all box/relax aniso 0.0 vmax 0.105
+minimize        1.0e-4 1.0e-6 1000 10000
+#unfix 1
+write_data      data.min
+
+# NVT
+dump            myDump1 all atom 500 out.0.lammpstrj 
+fix             1 all temp/csvr ${temperature} ${temperature} ${tempDamp} ${seed}
+fix             2 all shake 0.0001 20 100000 t 2 3
+fix             3 all nve
+timestep        2.0
+velocity        all create ${temperature} ${seed} dist gaussian
+run             10000
+unfix           1
+unfix           2
+unfix           3
+write_data      data.NVT
+undump          myDump1
+reset_timestep  0
+# NPT
+dump            myDump2 all atom 500 out.1.lammpstrj 
+fix             1 all temp/csvr ${temperature} ${temperature} ${tempDamp} ${seed}
+fix             2 all shake 0.0001 20 100000 t 2 3
+fix             3 all nph tri ${pressure} ${pressure} ${pressureDamp} 
+fix             4 all momentum 10000 linear 1 1 1
+run             50000
+unfix           1
+unfix           2
+unfix           3
+unfix           4
+undump          myDump2
+reset_timestep  0
+write_restart   restart.file
+write_data      data.eq
+

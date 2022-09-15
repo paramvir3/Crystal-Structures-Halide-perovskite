@@ -1,0 +1,245 @@
+####################################################################### 
+# 
+# This file contains crystal structure data downloaded from the 
+# Cambridge Structural Database (CSD) hosted by the Cambridge 
+# Crystallographic Data Centre (CCDC).
+# 
+# Full information about CCDC data access policies and citation 
+# guidelines are available at http://www.ccdc.cam.ac.uk/access/V1 
+# 
+# Audit and citation data items may have been added by the CCDC. 
+# Please retain this information to preserve the provenance of 
+# this file and to allow appropriate attribution of the data. 
+# 
+#######################################################################
+
+data_4b_293K
+_audit_block_doi                 10.5517/cc11hdjg
+_database_code_depnum_ccdc_archive 'CCDC 968115'
+loop_
+_citation_id
+_citation_doi
+_citation_year
+1 10.1021/ic401215x 2013
+_audit_update_record             
+;
+2013-10-22 deposited with the CCDC.	2022-09-02 downloaded from the CCDC.
+;
+
+_audit_creation_method           SHELXL-97
+_chemical_name_systematic        
+; 
+ ? 
+;
+_chemical_name_common            delta-Formamidinium_Lead_Iodide
+_chemical_melting_point          ?
+_chemical_formula_moiety         HC(NH2)PbI3
+_chemical_formula_sum            'C H5 I3 N2 Pb'
+_chemical_formula_weight         632.96
+
+loop_
+_atom_type_symbol
+_atom_type_description
+_atom_type_scat_dispersion_real
+_atom_type_scat_dispersion_imag
+_atom_type_scat_source
+C C 0.0033 0.0016 'International Tables Vol C Tables 4.2.6.8 and 6.1.1.4'
+H H 0.0000 0.0000 'International Tables Vol C Tables 4.2.6.8 and 6.1.1.4'
+N N 0.0061 0.0033 'International Tables Vol C Tables 4.2.6.8 and 6.1.1.4'
+I I -0.4742 1.8119 'International Tables Vol C Tables 4.2.6.8 and 6.1.1.4'
+Pb Pb -3.3944 10.1111 'International Tables Vol C Tables 4.2.6.8 and 6.1.1.4'
+
+_symmetry_cell_setting           Hexagonal
+_symmetry_space_group_name_H-M   P63mc
+
+loop_
+_symmetry_equiv_pos_as_xyz
+'x, y, z'
+'-y, x-y, z'
+'-x+y, -x, z'
+'-x, -y, z+1/2'
+'y, -x+y, z+1/2'
+'x-y, x, z+1/2'
+'-y, -x, z'
+'-x+y, y, z'
+'x, x-y, z'
+'y, x, z+1/2'
+'x-y, -y, z+1/2'
+'-x, -x+y, z+1/2'
+
+_cell_length_a                   8.6603(14)
+_cell_length_b                   8.6603(14)
+_cell_length_c                   7.9022(6)
+_cell_angle_alpha                90.00
+_cell_angle_beta                 90.00
+_cell_angle_gamma                120.00
+_cell_volume                     513.27(12)
+_cell_formula_units_Z            2
+_cell_measurement_temperature    293(2)
+_cell_measurement_reflns_used    1625
+_cell_measurement_theta_min      2.72
+_cell_measurement_theta_max      25.51
+
+_exptl_crystal_description       'hexagonal plate'
+_exptl_crystal_colour            yellow
+_exptl_crystal_size_max          0.062
+_exptl_crystal_size_mid          0.046
+_exptl_crystal_size_min          0.031
+_exptl_crystal_density_meas      ?
+_exptl_crystal_density_diffrn    4.096
+_exptl_crystal_density_method    'not measured'
+_exptl_crystal_F_000             532
+_exptl_absorpt_coefficient_mu    25.384
+_exptl_absorpt_correction_type   integration
+_exptl_absorpt_correction_T_min  0.1709
+_exptl_absorpt_correction_T_max  0.3332
+
+
+_diffrn_ambient_temperature      293(2)
+_diffrn_measurement_device       '2-circle goniometer'
+_diffrn_measurement_device_type  'STOE IPDS 2T'
+_diffrn_detector                 'image plate (34 cm diameter)'
+_diffrn_detector_type            STOE
+_diffrn_detector_area_resol_mean 6.67
+_diffrn_source                   
+'sealed X-ray tube, 12 x 0.4 mm long-fine focus'
+_diffrn_source_voltage           40
+_diffrn_source_current           30
+_diffrn_source_power             1.20
+_diffrn_radiation_type           'Mo K\a'
+_diffrn_radiation_wavelength     0.71073
+_diffrn_radiation_monochromator  'plane graphite'
+_diffrn_radiation_polarisn_norm  0
+_diffrn_radiation_collimation    '0.5 mm diameter, monocapillary'
+_diffrn_measurement_method       'rotation method'
+_diffrn_reflns_number            1687
+_diffrn_reflns_av_R_equivalents  0.0759
+_diffrn_reflns_av_sigmaI/netI    0.0440
+_diffrn_reflns_limit_h_min       -10
+_diffrn_reflns_limit_h_max       7
+_diffrn_reflns_limit_k_min       -9
+_diffrn_reflns_limit_k_max       10
+_diffrn_reflns_limit_l_min       -8
+_diffrn_reflns_limit_l_max       9
+_diffrn_reflns_theta_min         2.72
+_diffrn_reflns_theta_max         24.99
+_reflns_number_total             354
+_reflns_number_gt                300
+_reflns_threshold_expression     >2sigma(I)
+
+
+_computing_structure_solution    'SHELXS-97 (Sheldrick, 2008)'
+_computing_structure_refinement  'SHELXL-97 (Sheldrick, 2008)'
+_computing_molecular_graphics    ?
+_computing_publication_material  ?
+
+
+_refine_ls_structure_factor_coef Fsqd
+_refine_ls_matrix_type           full
+_refine_ls_weighting_scheme      calc
+_refine_ls_weighting_details     
+'calc w=1/[\s^2^(Fo^2^)+(0.0751P)^2^+0.0000P] where P=(Fo^2^+2Fc^2^)/3'
+_atom_sites_solution_primary     direct
+_atom_sites_solution_secondary   difmap
+_atom_sites_solution_hydrogens   none
+_refine_ls_hydrogen_treatment    none
+_refine_ls_extinction_method     SHELXL
+_refine_ls_extinction_coef       0.0081(15)
+_refine_ls_extinction_expression Fc^*^=kFc[1+0.001xFc^2^\l^3^/sin(2\q)]^-1/4^
+_refine_ls_abs_structure_details 'Flack H D (1983), Acta Cryst. A39, 876-881'
+_refine_ls_abs_structure_Flack   0.0(3)
+_refine_ls_number_reflns         354
+_refine_ls_number_parameters     17
+_refine_ls_number_restraints     3
+_refine_ls_R_factor_all          0.0516
+_refine_ls_R_factor_gt           0.0437
+_refine_ls_wR_factor_ref         0.1102
+_refine_ls_wR_factor_gt          0.1066
+_refine_ls_goodness_of_fit_ref   1.055
+_refine_ls_restrained_S_all      1.067
+_refine_ls_shift/su_max          0.000
+_refine_ls_shift/su_mean         0.000
+
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_U_iso_or_equiv
+_atom_site_adp_type
+_atom_site_occupancy
+_atom_site_symmetry_multiplicity
+_atom_site_calc_flag
+_atom_site_refinement_flags
+_atom_site_disorder_assembly
+_atom_site_disorder_group
+Pb Pb 0.0000 0.0000 0.006(7) 0.0520(5) Uani 1 6 d S . .
+I I 0.83117(8) 0.16883(8) 0.251(7) 0.0733(6) Uani 1 2 d S . .
+N N 0.409(3) 0.591(3) 0.15493(17) 0.35(9) Uiso 0.67 2 d SPD . .
+C C 0.3333 0.6667 0.15493(17) 0.099(17) Uiso 1 6 d SD . .
+
+loop_
+_atom_site_aniso_label
+_atom_site_aniso_U_11
+_atom_site_aniso_U_22
+_atom_site_aniso_U_33
+_atom_site_aniso_U_23
+_atom_site_aniso_U_13
+_atom_site_aniso_U_12
+Pb 0.0520(6) 0.0520(6) 0.0520(8) 0.000 0.000 0.0260(3)
+I 0.0845(9) 0.0845(9) 0.0796(10) -0.0030(12) 0.0030(12) 0.0638(9)
+
+
+loop_
+_geom_bond_atom_site_label_1
+_geom_bond_atom_site_label_2
+_geom_bond_distance
+_geom_bond_site_symmetry_2
+_geom_bond_publ_flag
+Pb I 3.188(3) 3_665 ?
+Pb I 3.188(3) 1_455 ?
+Pb I 3.188(3) 2_545 ?
+Pb I 3.236(4) 6_444 ?
+Pb I 3.236(4) 4_654 ?
+Pb I 3.236(4) 5_564 ?
+I Pb 3.188(3) 1_655 ?
+I Pb 3.236(4) 4_655 ?
+N C 1.13(5) . ?
+C N 1.13(5) 3_565 ?
+C N 1.13(5) 2_665 ?
+
+loop_
+_geom_angle_atom_site_label_1
+_geom_angle_atom_site_label_2
+_geom_angle_atom_site_label_3
+_geom_angle
+_geom_angle_site_symmetry_1
+_geom_angle_site_symmetry_3
+_geom_angle_publ_flag
+I Pb I 86.93(11) 3_665 1_455 ?
+I Pb I 86.93(11) 3_665 2_545 ?
+I Pb I 86.93(11) 1_455 2_545 ?
+I Pb I 178.91(15) 3_665 6_444 ?
+I Pb I 93.86(2) 1_455 6_444 ?
+I Pb I 93.86(2) 2_545 6_444 ?
+I Pb I 93.86(2) 3_665 4_654 ?
+I Pb I 178.91(15) 1_455 4_654 ?
+I Pb I 93.86(2) 2_545 4_654 ?
+I Pb I 85.34(11) 6_444 4_654 ?
+I Pb I 93.86(2) 3_665 5_564 ?
+I Pb I 93.86(2) 1_455 5_564 ?
+I Pb I 178.91(15) 2_545 5_564 ?
+I Pb I 85.34(11) 6_444 5_564 ?
+I Pb I 85.34(11) 4_654 5_564 ?
+Pb I Pb 75.91(3) 1_655 4_655 ?
+N C N 120.000(5) 3_565 2_665 ?
+N C N 120.000(3) 3_565 . ?
+N C N 120.000(9) 2_665 . ?
+
+_diffrn_measured_fraction_theta_max 1.000
+_diffrn_reflns_theta_full        24.99
+_diffrn_measured_fraction_theta_full 1.000
+_refine_diff_density_max         1.975
+_refine_diff_density_min         -0.721
+_refine_diff_density_rms         0.260

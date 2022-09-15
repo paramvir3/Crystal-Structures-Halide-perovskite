@@ -1,0 +1,60 @@
+
+bond_style          harmonic
+angle_style         harmonic
+dihedral_style      opls 
+improper_style      cvff
+pair_style          hybrid lj/cut/coul/long 10.0 8.0 buck/coul/long 10.0 8.0
+kspace_style        pppm 1e-4
+special_bonds       amber
+variable x          equal 0.966 
+variable xA         equal 0.9666
+variable APb        equal "70359906.629702/v_xA"
+variable rPb        equal "0.131258*v_x"
+variable rhoPb      equal "0.0*v_x"
+variable xR         equal  0.9666 
+variable xAR        equal  0.6
+variable APbI       equal "103496.133010/v_xAR"
+variable rPbI       equal "0.321737*v_xR"
+variable rhoPbI     equal "0.0*v_xR"
+variable xIR        equal 0.92 
+variable xAIR       equal 1.2
+variable AI         equal "22793.338582/v_xAIR"
+variable rI         equal "0.482217*v_xIR"
+variable rhoI       equal "696.94952*v_xIR"
+
+# Force field
+pair_coeff 1 1 lj/cut/coul/long     0.076           3.55                 #C-C
+pair_coeff 2 2 lj/cut/coul/long     0.0157          1.06910              #H-H
+pair_coeff 3 3 lj/cut/coul/long     0.030           2.50                 #Ha-Ha
+pair_coeff 4 4 buck/coul/long       ${AI}           ${rI}      ${rhoI}   #I-I
+pair_coeff 5 5 lj/cut/coul/long     0.1700          3.25000              #N-N
+pair_coeff 6 6 buck/coul/long       ${APb}          ${rPb}     ${rhoPb}  #Pb-Pb
+pair_coeff 2 4 lj/cut/coul/long     0.0574          2.75000              #I-H
+pair_coeff 1 4 buck/coul/long       112936.714213   0.342426   0.000000  #I-C
+pair_coeff 3 4 lj/cut/coul/long     0.0574          3.10000              #I-Ha
+pair_coeff 4 5 buck/coul/long       112936.714213   0.342426   0.000000  #I-N
+pair_coeff 4 6 buck/coul/long       ${APbI}         ${rPbI}    ${rhoPbI} #Pb-I
+pair_coeff 5 6 buck/coul/long       32690390.937995 0.150947   0.000000  #Pb-N
+pair_coeff 2 6 lj/cut/coul/long     0.0140          2.26454              #Pb-H
+pair_coeff 1 6 buck/coul/long       32690390.937995 0.150947   0.000000  #Pb-C
+pair_coeff 3 6 lj/cut/coul/long     0.0140          2.70999              #Pb-Ha
+
+#Bond Coeffs
+bond_coeff    1   340.4000   1.0800     #C-Ha
+bond_coeff    2   448.0000   1.3650     #C-N
+bond_coeff    3   434.0000   1.0100     #H-N
+
+#Angle Coeffs
+angle_coeff    1   35.000    120.000    #C-N-H    
+angle_coeff    2   35.000    113.000    #H-N-H    
+angle_coeff    3   35.000    119.100    #Ha-C-N
+angle_coeff    4   70.000    120.000    #N-C-N
+ 
+# Dihedral coefficients
+dihedral_coeff   1   0.000      3.900      0.000      0.000    #Ha-C-N-H 
+dihedral_coeff   2   0.000      3.900      0.000      0.000    #H-N-C-N
+
+#impropers
+improper_coeff   1   2.500      -1       2      #C-N-N-Ha 
+improper_coeff   2   2.500      -1       2      #N-C-H-H
+
