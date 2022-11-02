@@ -2,35 +2,108 @@
 ###
 dimension       3
 boundary        p p p
-units           metal
+units           real
 atom_style      full
+
+variable        p_id world   1
+
+variable        temperature equal 300.0
+variable        temperature2 equal 300.0
+variable        tempDamp equal 100 # ps
+
+variable        pressure equal 1.00
+variable        pressureDamp equal 500 #ps
+
 variable        seed world 1428
-variable        freq equal 500
+
 read_data       data.CPI
+
 mass            1 132.904999 # Cs
-mass            2 126.900002 # I
+mass            2 126.90447  # I
 mass            3 204.199997 # Pb
-pair_style      lj/cut/coul/long 8.0 10.0
+
+variable        freq equal 500
+
+pair_style      lj/cut/coul/long 10.0 10.0
 pair_modify     mix arithmetic
-neigh_modify    every 1
+neighbor        0.3 bin
+neigh_modify    check yes delay 0
 kspace_style    pppm 1e-4
 dielectric 1.0
-variable ACs  equal "0.07728"
-variable rCs  equal "3.584"
-variable APb  equal "0.001086"
-variable rPb  equal "3.210"
-variable AI   equal "0.06389"
-variable rI   equal "4.014"
-pair_coeff      1 1 ${ACs}    ${rCs}
-pair_coeff      2 2 ${AI}     ${rI}
-pair_coeff      3 3 ${APb}    ${rPb}
+
+variable AI     equal "0.042784417"
+variable rI     equal "5.04975"
+variable ACs    equal "0.0898565009" 
+variable rCs    equal "3.521013"
+variable ACsI   equal "0.0467571702"
+variable rCsI   equal "4.43790"
+
+variable APb    equal "0.0942780"
+variable rPb    equal "4.043"
+variable APbI   equal "4.7050"
+variable rPbI   equal "2.800"
+variable APbCs   equal "4.01050"
+variable rPbCs   equal "4.100"
+
+pair_coeff      1 1 ${ACs}    ${rCs} 
+pair_coeff      2 2 ${AI}     ${rI}  
+pair_coeff      3 3 ${APb}    ${rPb}     
+pair_coeff      1 2 ${ACsI}   ${rCsI}    
+pair_coeff      2 3 ${APbI}   ${rPbI}  
+pair_coeff      1 3 ${APbCs}  ${rPbCs}   
+
+
 thermo          ${freq}
 thermo_style    custom step temp pe ke etotal press lx ly lz xy xz yz
+restart         ${freq} restart.0 restart.2
+
 # Minimization
 
+# Minimization
 min_style cg
 fix 1 all box/relax aniso 0.0 vmax 0.01
-minimize        1.0e-4 1.0e-6 1000 10000
+minimize        1.0e-3 1.0e-5 1000 10000
 unfix 1
 write_data      data.min
+reset_timestep  0
+
+# NVT
+dump            myDump1 all atom 500 out.0.lammpstrj 
+fix             1 all temp/csvr ${temperature} ${temperature2} ${tempDamp} ${seed}
+fix             2 all nve
+
+timestep        2.0
+
+velocity        all create ${temperature} ${seed} dist gaussian
+run             10000
+
+unfix           1
+unfix           2
+
+write_data      data.NVT
+
+undump          myDump1
+reset_timestep  0
+
+# NPT
+
+dump            myDump2 all atom 500 out.ortho.lammpstrj 
+
+fix             1 all temp/csvr ${temperature2} ${temperature2} ${tempDamp} ${seed}
+fix             2 all nph tri ${pressure} ${pressure} ${pressureDamp} 
+fix             3 all momentum 10000 linear 1 1 1
+
+run             10000
+
+unfix           1
+unfix           2
+unfix           3
+
+undump          myDump2
+
+reset_timestep  0
+
+write_restart   restart.file
+write_data      data.eq
+
 
