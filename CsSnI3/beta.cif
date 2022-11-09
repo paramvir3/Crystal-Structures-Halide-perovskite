@@ -1,0 +1,76 @@
+####################################################################### 
+# 
+# This file contains crystal structure data downloaded from the 
+# Cambridge Structural Database (CSD) hosted by the Cambridge 
+# Crystallographic Data Centre (CCDC) in cooperation with FIZ Karlsruhe.
+# 
+# Please note that these data are only for research purposes or private use.
+# For detailed information please see under Terms & Conditions.
+# Full information about CCDC and FIZ Karlsruhe data access policies and 
+# citation guidelines are available at http://www.ccdc.cam.ac.uk/access/V1
+# 
+# Audit and citation data items may have been added by FIZ Karlsruhe. 
+# Please retain this information to preserve the provenance of 
+# this file and to allow appropriate attribution of the data. 
+# 
+#######################################################################
+
+data_262925-ICSD
+_database_code_depnum_ccdc_archive 'CCDC 1720495'
+loop_
+_citation_id
+_citation_doi
+_citation_year
+1 10.1021/ja301539s 2012
+_audit_update_record             
+;
+2018-02-28 deposited with the CCDC.	2022-11-08 downloaded from the CCDC.
+;
+_database_code_ICSD              262925
+_chemical_name_systematic        'Cesium Tin Triiodide'
+_chemical_formula_sum            'Cs1 I3 Sn1'
+_cell_length_a                   8.7182
+_cell_length_b                   8.7182
+_cell_length_c                   6.1908
+_cell_angle_alpha                90
+_cell_angle_beta                 90
+_cell_angle_gamma                90
+_cell_volume                     470.54
+_cell_formula_units_Z            2
+_symmetry_space_group_name_H-M   'P 4/m b m'
+_symmetry_Int_Tables_number      127
+_symmetry_cell_setting           tetragonal
+_refine_ls_R_factor_all          0.0656
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+1 'y+1/2, x+1/2, -z'
+2 '-y+1/2, -x+1/2, -z'
+3 '-y, x, -z'
+4 'y, -x, -z'
+5 'x+1/2, -y+1/2, -z'
+6 '-x+1/2, y+1/2, -z'
+7 'x, y, -z'
+8 '-x, -y, -z'
+9 '-y+1/2, -x+1/2, z'
+10 'y+1/2, x+1/2, z'
+11 'y, -x, z'
+12 '-y, x, z'
+13 '-x+1/2, y+1/2, z'
+14 'x+1/2, -y+1/2, z'
+15 '-x, -y, z'
+16 'x, y, z'
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+I1 I1- 0 0 0
+I2 I1- 0.7763 0.2763 0.5
+Sn1 Sn2+ 0 0 0.5
+Cs1 Cs1+ 0.5 0 0
+
+#End of data_262925-ICSD
+
+
