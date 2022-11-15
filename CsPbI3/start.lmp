@@ -35,8 +35,9 @@ variable AI     equal "0.042784417"
 variable rI     equal "5.04975"
 variable ACs    equal "0.0898565009" 
 variable rCs    equal "3.521013"
-variable ACsI   equal "0.0467571702"
-variable rCsI   equal "4.43790"
+
+variable ACsI   equal "14.0467571702"
+variable rCsI   equal "3.39790"
 
 variable APb    equal "0.0942780"
 variable rPb    equal "4.043"
