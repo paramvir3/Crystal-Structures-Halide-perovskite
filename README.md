@@ -5,4 +5,4 @@
 - D.M. Trots, S.V. Myagkota, Journal of Physics and Chemistry of Solids, 2008, 69, 2520, DOI: 10.1016/j.jpcs.2008.05.007 - ICSD Entry: 161481
 
 ## Contact
-Created by [@paramvir]() - feel free to contact me!
+Created by [@paramvir]() -- contact me
